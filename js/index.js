@@ -35,17 +35,28 @@ async function fetchData() {
 
 function createCells(data, i = 0) {
     const row = dataTable.lastElementChild.insertRow();
-    const cell1 = row.insertCell();
-    const cell2 = row.insertCell();
-    const cell3 = row.insertCell();
-    const cell4 = row.insertCell();
-    const cell5 = row.insertCell();
-    cell1.textContent = data[i].name.common;
-    cell2.textContent = data[i].altSpellings[0];
-    cell3.textContent = data[i].capital;
-    cell4.textContent = data[i].population;
-    if (data[i].currencies && Object.keys(data[i].currencies) instanceof Array) {
-        cell5.textContent = Object.keys(data[i].currencies)[0];
+
+    for (let j = 0; j < 5; j++) {
+        const cell = row.insertCell();
+        switch (j) {
+            case 0:
+                cell.textContent = data[i].name.common;
+                break;
+            case 1:
+                cell.textContent = data[i].altSpellings[0];
+                break;
+            case 2:
+                cell.textContent = data[i].capital;
+                break;
+            case 3:
+                cell.textContent = data[i].population;
+                break;
+            case 4:
+                cell.textContent = data[i].currencies ? Object.keys(data[i].currencies)[0] : "";
+                break;
+            default:
+                break;
+        }
     }
 }
 
