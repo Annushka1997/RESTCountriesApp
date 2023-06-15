@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .wrapper__top {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.wrapper .wrapper__top #searchBtn {
+    flex-grow: 1;
+    padding: 6px;
+    font-size: 18px;
+}
+
+.wrapper .wrapper__top select {
+    flex-shrink: 0;
+    padding: 8px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.wrapper .wrapper__top select::-ms-expand {
+    display: none;
+}
+
+.wrapper .wrapperBody {
+    width: 100%;
+}
+
+.wrapper .table-container {
+    overflow-x: auto;
+}
+
+.wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wrapper table th,
+.wrapper table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.wrapper table th {
+    background-color: #f5f5f5;
+}
+
+.selected {
+    background-color: #777;
+}
+
+.wrapper .pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.wrapper .pagination button {
+    padding: 4px 8px;
+    margin: 0 5px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.wrapper .pagination button.current-page {
+    padding: 8px 12px;
+    background-color: #a59b9b;
+}
+
+.sort-btn {
+    border: none;
+    background: #ccc;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sort-btn-asc, .sort-btn-desc {
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.sort-btn-asc::after, .sort-btn-desc::after {
+    content: "↑";
+}
+
+.sort-btn-asc:hover, .sort-btn-desc:hover {
+    background: #777;
+    color: #fff;
+}
+
+.sort-btn-desc {
+    transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper .wrapper__top {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .wrapper .wrapper__top #searchBtn {
+        margin-top: 10px;
+    }
+
+    .wrapper .pagination {
+        flex-wrap: wrap;
+    }
+
+    .wrapper .pagination button {
+        margin-bottom: 5px;
+    }
+}
+
+button.select {
+    background: #6551515e;
+}

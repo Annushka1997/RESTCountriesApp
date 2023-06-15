@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="wrapper__top">
+                <select id="rowsPerPageSelect">
+                    <option value="5">5 per page</option>
+                    <option value="10">10 per page</option>
+                    <option value="15">15 per page</option>
+                </select>
+                <input type="text" id="searchBtn" placeholder="Search...">
+            </div>
+            <div class="wrapperBody" id="wrapper__body">
+                <div class="table-container">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th data-column="name" id="nameHeader">Name
+                                    <button class="sort-btn-asc" data-column="name" data-sort-direction="asc">
+                                    </button>
+                                    <button class="sort-btn-desc" data-column="name" data-sort-direction="desc">
+                                    </button>
+                                </th>
+                                <th data-column="altSpellings" id="altSpellingsHeader">Alt Spellings
+                                    <button class="sort-btn-asc" data-column="altSpellings" data-sort-direction="asc">
+                                    </button>
+                                    <button class="sort-btn-desc" data-column="altSpellings" data-sort-direction="desc">
+                                    </button>
+                                </th>
+                                <th data-column="capital" id="capitalHeader">Capital
+                                    <button class="sort-btn-asc" data-column="capital" data-sort-direction="asc">
+                                    </button>
+                                    <button class="sort-btn-desc" data-column="capital" data-sort-direction="desc">
+                                    </button>
+                                </th>
+                                <th data-column="population" id="populationHeader">Population
+                                    <button class="sort-btn-asc" data-column="population" data-sort-direction="asc">
+                                    </button>
+                                    <button class="sort-btn-desc" data-column="population" data-sort-direction="desc">
+                                    </button>
+                                </th>
+                                <th data-column="currencies" id="currenciesHeader">Currencies
+                                    <button class="sort-btn-asc" data-column="currencies" data-sort-direction="asc">
+                                    </button>
+                                    <button class="sort-btn-desc" data-column="currencies" data-sort-direction="desc">
+                                    </button>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="paginationContainer" class="pagination"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
